@@ -1,67 +1,104 @@
 # Hi — I'm Mayank 👋
 
-Welcome to my GitHub profile! I build things that solve real problems, learn by doing, and enjoy turning ideas into production-ready projects. This repo is the profile README that lives on my GitHub home — here's a creative snapshot of what I do and where to find my work. ✨
+I build polished web and mobile experiences driven by thoughtful APIs and pragmatic engineering. I ship prototypes fast and iterate them into production-ready apps — with a focus on TypeScript-first stacks, API-first design, and clear UX.
 
 ---
 
-## What I build
+## Spotlight projects
 
-- Modern web apps (Next.js, React) and production backends (Node.js, Express).
-- Mobile apps and experiments in Android (Kotlin).
-- Java services, Spring Boot APIs and integration work.
-- Hackathon prototypes and full-stack demos mixing TypeScript, JS, and cloud deployments.
+### mysterymessage — mysterious, delightful messaging (LIVE)
+🔗 https://mysterymessage-bice.vercel.app  
+A TypeScript + Next.js app (Next 16, React 19) built as a full-stack messaging playground that emphasizes privacy, message verification and modern email/notifications. Key tech and deps: Next.js, React, TypeScript, next-auth, Mongoose/MongoDB, OpenAI & Google generative AI integrations, Nodemailer/Resend for email, Tailwind/Shadcn UI.
 
-I like connecting frontend polish with solid backend architecture — clean APIs, reliable data flows, and a friendly UX.
+What stands out
+- Full Next.js app with TypeScript-first config (strict TS, path aliases).
+- AI/LLM-ready: openai + generative AI packages configured.
+- Email flows and verification (resend / nodemailer + react-email components).
+- Deployed to Vercel (link above).
 
----
-
-## Highlighted projects
-
-- 🔗 Portfolio — a fast Next.js personal site (deployed): https://mayankajain-portfolio.vercel.app
-- 🧠 analyzer — an architecture & AI-backed analysis project (Spring Boot + integration): https://github.com/mayankjain92/analyzer
-- 🧩 probackend / chaibackend — Node.js backend projects and APIs: https://github.com/mayankjain92/probackend | https://github.com/mayankjain92/chaibackend
-- 📱 AndroidDevelopmentProjects — mobile demos and learning projects in Kotlin: https://github.com/mayankjain92/AndroidDevelopmentProjects
-- ⚡ odoo-hacathon — TypeScript hackathon project: https://github.com/mayankjain92/odoo-hacathon
-
-(There are a few more experiments and utilities — explore my repos to see the full collection.)
+Quick local dev
+```bash
+# from repo root
+npm install
+npm run dev        # runs: next dev --webpack
+```
 
 ---
 
-## Tech & tools I enjoy
+### prep-os — monorepo in progress (your current focus)
+🔗 https://github.com/mayankjain92/prep-os  
+Monorepo scaffold using pnpm workspaces. The repository contains `apps/` and `packages/` folders, a workspace file, and a docker-compose to run supporting services. This is the multi-package foundation for a multi-app system — ideal for composing shared UI, API and infra tooling.
 
-- Languages: JavaScript, TypeScript, Java, Kotlin
-- Frontend: Next.js, React
-- Backend: Node.js, Express, Spring Boot
-- Databases & infra: Postgres, Docker, basic cloud deploys (Vercel/Heroku-style flow)
-- Other: REST APIs, authentication, microservice patterns
+What stands out
+- pnpm workspace (pnpm-workspace.yaml + pnpm-lock.yaml).
+- Docker Compose provided for local infra orchestration.
+- Structured for multiple apps & packages (apps/ & packages/).
 
----
-
-## How I work
-
-- Rapid prototypes → iterate into production
-- API-first thinking: design the contract, then implement
-- Tests, CI, and small deployable increments
-- Open to collaboration — I enjoy pairing on ideas and shipping small, focused features
-
----
-
-## Want to collaborate or chat?
-
-- Portfolio & contact: https://mayankajain-portfolio.vercel.app
-- GitHub: https://github.com/mayankjain92
-
-If you have an idea — raise an issue, fork a repo, or send a quick DM here on GitHub. I usually respond to collaboration invites and interesting project proposals. 🚀
+Quick local dev (typical for this layout)
+```bash
+# from monorepo root
+pnpm install
+# inspect apps/ to pick which app to run, e.g.:
+cd apps/<app-name>
+pnpm install
+pnpm dev
+# or run workspace scripts if defined
+```
 
 ---
 
-## Fun facts
+### chat-app — classic client/server chat demo (report included)
+🔗 https://github.com/mayankjain92/chat-app  
+A JavaScript-first chat demo with separate `client/` and `server/` directories and a detailed PROJECT_REPORT. Great for demonstrating real-time flows and basic messaging architectures.
 
-- I love hackathons and building something useful in a weekend. 🏁
-- I switch contexts between mobile and web — each perspective makes the other better.
-- I’m always learning new patterns: distributed tracing, better testing, and pragmatic architecture.
+What stands out
+- Clear client / server split for chat logic, sockets, and API endpoints.
+- In-repo project report describing design decisions and architecture.
+- Lightweight, easy to run and iterate.
+
+Quick local dev
+```bash
+# inspect /client and /server for start scripts
+cd client && npm install && npm run dev
+cd server && npm install && npm run dev
+```
 
 ---
 
-Thanks for stopping by — explore a repo, open an issue, or say hi! 👋
+### portfolio — personal site (Next.js)
+🔗 https://mayankajain-portfolio.vercel.app  
+Your public portfolio built with Next.js + Tailwind, showcasing projects and contact info.
 
+Quick local dev
+```bash
+npm install
+npm run dev
+# open http://localhost:3000
+```
+
+---
+
+## Tech snapshot
+- Primary languages: TypeScript (majority), JavaScript, CSS/Tailwind
+- Frontend: Next.js, React, shadcn UI, Tailwind
+- Backend/databases: Node.js, Express-style APIs, MongoDB (Mongoose)
+- AI & integrations: openai, @google/generative-ai, ai (client libs)
+- Monorepo & tooling: pnpm workspaces, Docker Compose, TypeScript strict config
+
+---
+
+## How I approach projects
+- API-first: design the contract, then implement and test.
+- Prototyping fast: ship a minimal, usable flow, then iterate.
+- Practical infra: local dev with docker/pnpm; deploy on Vercel or container hosts.
+- Testing & validation: strict typing, schema validation (zod), and small, testable components.
+
+---
+
+## Want to explore specific things in these repos?
+- mysterymessage: I can highlight the authentication & email verification flow, or document LLM integration points (OpenAI + Google Generative AI).
+- prep-os: I can list the workspace packages and recommend workspace-level scripts for dev/test/deploy.
+- chat-app: I can extract the real-time architecture (socket choices, message persistence) and produce a minimal run & test guide.
+- portfolio: I can add screenshots, CI/Vercel badges, and a “What I built” showcase section that links to specific commits or demos.
+
+Thanks for trusting me with your profile — explore the links above and feel free to copy this README into your profile repo to make it the landing page for visitors. 🚀
